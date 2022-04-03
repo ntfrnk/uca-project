@@ -2,16 +2,13 @@
     <div class="container">
         <div class="fullnav">
             <div class="logo">
-                <a class="brand" href="#">UCA Cursos</a>
+                <a class="brand" href="{{ route('home') }}">UCA Cursos</a>
             </div>
             <nav>
-                <a href="#">Home</a>
-                <a href="#">Cursos</a>
                 @auth
-                    <a href="#">Configuración</a>
-                    <a href="#">Salir</a>
-                @else
-                    <a href="#">Ingresar</a>
+                    <a href="{{ route('home') }}">Cursos</a> 
+                    <a href="{{ route('settings') }}">Configuración</a>
+                    <a href="{{ route('logout') }}">Salir</a>
                 @endauth
             </nav>
         </div>

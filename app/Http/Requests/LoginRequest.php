@@ -28,4 +28,20 @@ class LoginRequest extends FormRequest
             'password' => 'required|string',
         ];
     }
+
+    /**
+     * Set the messages for validations
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'email.required' => 'Debes ingresar tu correo electrónico',
+            'email.email' => 'El formato ingresado no es correcto',
+            'email.exists' => 'El correo que indicas no existe en nuestro sistema',
+            'password.required' => 'Debes ingresar la contraseña',
+            'password.string' => 'La contraseña tiene un formato incorrecto',
+        ];
+    }
 }
