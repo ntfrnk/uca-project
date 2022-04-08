@@ -88,16 +88,14 @@ Al ejecutar las migraciones y seeders el sistema creará una serie de datos impr
 
 Iniciar sesión con los siguientes datos (*):
 
-	```
+
 	Usuario: admin@ucaproject.com
 	Contraseña: admin
-	```
+
 
 (*) Todos los usuarios que se crean luego de manera automática tendrán una misma contraseña para acceder, salvo que se modifique manualmente la misma. La contraseña será: 
 
-	```
 	generic
-	```
 
 
 <img src="http://frankoca.com.ar/images/login.png" width='700px' />
