@@ -79,7 +79,7 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 
 ## Modelo de datos
 
-![](http://frankoca.com.ar/images/DB.jpeg){width='600px'}
+<img src="http://frankoca.com.ar/images/DB.jpeg" width='600px' />
 
 
 ## Indicaciones de uso
@@ -95,11 +95,11 @@ Iniciar sesión con los siguientes datos (*):
 
 ```generic```
 
-![](http://frankoca.com.ar/images/login.png){width='600px'}
+<img src="http://frankoca.com.ar/images/login.png" width='600px' />
 
 En la primera pantalla sólo encontraremos el usuario administrador que se creó junto con la migración.
 
-![](http://frankoca.com.ar/images/segunda.png){width='600px'}
+<img src="http://frankoca.com.ar/images/segunda.png" width='600px' />
 
 Además están los botones numerados 1, 2, y 3, que permitirán crear usuarios manual o automáticamente, de la siguiente manera:
 
@@ -107,14 +107,14 @@ Además están los botones numerados 1, 2, y 3, que permitirán crear usuarios m
 	2. Creación automática de alumnos (con datos aleatorios).
 	3. Creación automática de profesores (con datos aleatorios).
 
-![](http://frankoca.com.ar/images/acciones-usuarios.png){width='600px'}
+<img src="http://frankoca.com.ar/images/acciones-usuarios.png" width='600px' />
 
 En esta imagen podemos ver encuadrados dos grupos de funcionalidades útiles para gestionar a los usuarios de la plataforma:
 
 	1. Filtro de usuarios según su rango (alumnos, profesores, administradores).
 	2. Opciones de edición / eliminación de usuarios.
 
-![](http://frankoca.com.ar/images/cursos-acciones.png){width='600px'}
+<img src="http://frankoca.com.ar/images/cursos-acciones.png" width='600px' />
 
 En este screenshot se puede observar las diferentes opciones que ofrece la plataforma para administrar los cursos.
 
@@ -127,19 +127,19 @@ En este screenshot se puede observar las diferentes opciones que ofrece la plata
 		d. Eliminación del curso.
 	4. API de generación de reporte JSON con los alumnos de cada curso.
 
-![](http://frankoca.com.ar/images/cuenta.png){width='600px'}
+<img src="http://frankoca.com.ar/images/cuenta.png" width='600px' />
 
 En esta captura se puede ver el contenido de la opción "Configuración", donde el usuario logueado puede modificar sus datos de cuenta y contraseña.
 
-![](http://frankoca.com.ar/images/alumno-cursos.png){width='600px'}
+<img src="http://frankoca.com.ar/images/alumno-cursos.png" width='600px' />
 
 Aquí podemos observar la forma en que un estudiante puede ver el listado de cursos disponibles cuando ingresa a la plataforma.
 
-![](http://frankoca.com.ar/images/alumno-cursos-detalle.png){width='600px'}
+<img src="http://frankoca.com.ar/images/alumno-cursos-detalle.png" width='600px />}
 
 En esta imagen vemos un ejemplo de la vista del detalle de cada curso.
 
-![](http://frankoca.com.ar/images/alumno-suscripciones.png){width='600px'}
+<img src="http://frankoca.com.ar/images/alumno-suscripciones.png" width='600px' />
 
 En esta última captura vemos el listado de cursos a los que un alumno ya está suscrito, con la opción de eliminar esa suscripción.
 
