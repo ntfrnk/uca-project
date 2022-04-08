@@ -10,7 +10,8 @@ use Illuminate\Http\Request;
 class AccountController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Se muestran los formularios para modificar
+     * los datos de la cuenta
      *
      * @return View
      */
@@ -21,7 +22,7 @@ class AccountController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Se modifica la información del usuario
      *
      * @param App\Http\Requests\UpdateAccountRequest $request
      * @param App\Models\User $user
@@ -40,7 +41,7 @@ class AccountController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Se modifica la contraseña
      *
      * @param App\Http\Requests\UpdatePasswordRequest $request
      * @param App\Models\User $user

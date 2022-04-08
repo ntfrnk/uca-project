@@ -7,9 +7,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     /**
-     * Dashboard
+     * Redirige al usuario logueado a su
+     * respectiva pantalla principal
      * 
-     * @return view
+     * @return Redirect
      */
     public function index()
     {

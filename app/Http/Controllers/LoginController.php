@@ -8,13 +8,18 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
+    /**
+     * Muestra el formulario de login
+     * 
+     * @return View
+     */
     public function index()
     {
         return view('auth.login');
     }
 
     /**
-     * Login 
+     * Valida los datos e inicia la sesión del usuario
      * 
      * @param App\Http\Requests\LoginRequest $request 
      * @return Redirect
@@ -30,7 +35,7 @@ class LoginController extends Controller
     }
 
     /**
-     * Logout
+     * Cierra la sesión del usuario
      * 
      * @return Redirect
      */

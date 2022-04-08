@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCourseRequest;
 use App\Http\Requests\StoreTeacherRequest;
 use App\Http\Requests\UpdateCourseRequest;
+
 use App\Models\Course;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\Http\Request;
 
 class CourseController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Se muestra el listado de cursos creados
      *
      * @return View
      */
@@ -24,7 +24,7 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Se muestra el formulario de creación de un curso
      *
      * @return View
      */
@@ -34,7 +34,7 @@ class CourseController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Se guardan los datos del nuevo curso
      *
      * @param App\Http\Requests\StoreCourseRequest $request
      * @return Redirect
@@ -52,9 +52,9 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se muestra el formulario de edición de un curso
      *
-     * @param \App\Models\Course $course
+     * @param App\Models\Course $course
      * @return View
      */
     public function edit(Course $course)
@@ -63,10 +63,10 @@ class CourseController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Se guardan los cambios de un curso
      *
-     * @param \App\Http\Requests\UpdateCourseRequest $request
-     * @param \App\Models\Course $course
+     * @param App\Http\Requests\UpdateCourseRequest $request
+     * @param App\Models\Course $course
      * @return Redirect
      */
     public function update(UpdateCourseRequest $request, Course $course)
@@ -82,9 +82,9 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se muestran los alumnos de un curso
      *
-     * @param \App\Models\Course $course
+     * @param App\Models\Course $course
      * @return View
      */
     public function students(Course $course)
@@ -93,10 +93,10 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se agrega aleatoriamente un alumno al curso
      *
-     * @param \App\Models\Course $course
-     * @return View
+     * @param App\Models\Course $course
+     * @return Redirect
      */
     public function random(Course $course)
     {
@@ -127,10 +127,11 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se elimina la suscripción de un alumno a un curso
      *
-     * @param \App\Models\Course $course
-     * @return View
+     * @param App\Models\Course $course
+     * @param App\Models\User $user
+     * @return Redirect
      */
     public function detach(Course $course, User $user)
     {
@@ -150,9 +151,9 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se muestran los profesores de un curso
      *
-     * @param \App\Models\Course $course
+     * @param App\Models\Course $course
      * @return View
      */
     public function teachers(Course $course)
@@ -161,9 +162,10 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se muestra el formulario para agregar un
+     * profesor a un curso
      *
-     * @param \App\Models\Course $course
+     * @param App\Models\Course $course
      * @return View
      */
     public function addTeacher(Course $course)
@@ -178,10 +180,11 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se agrega un profesor a un curso
      *
-     * @param \App\Models\Course $course
-     * @return View
+     * @param App\Http\Requests\StoreTeacherRequest $request
+     * @param App\Models\Course $course
+     * @return Redirect
      */
     public function teacherAttach(StoreTeacherRequest $request, Course $course)
     {
@@ -198,7 +201,7 @@ class CourseController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Se quita un profesor de un curso
      *
      * @param \App\Models\Course $course
      * @param \App\Models\User $user
@@ -215,7 +218,7 @@ class CourseController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Se borra un curso
      *
      * @param \App\Models\Course $course
      * @return Redirect
@@ -237,10 +240,9 @@ class CourseController extends Controller
     }
 
     /**
-     * Se agrega un usuario con datos aleatorios
+     * Se agrega un curso con datos aleatorios
      *
-     * @param  \App\Models\User  $user
-     * @return \Illuminate\Http\Response
+     * @return Redirect
      */
     public function newRandomCourse()
     {

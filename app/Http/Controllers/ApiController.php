@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\DB;
 
 class ApiController extends Controller
 {
+    /**
+     * Devuelve un listado JSON con los alumnos
+     * inscriptos a un determinado curso
+     * 
+     * @param int $course_id
+     * @return Response JSON
+     */
     public function index($course_id = '')
     {
         if(!empty($course_id)){

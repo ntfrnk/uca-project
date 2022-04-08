@@ -19,7 +19,8 @@ class StudentCourseController extends Controller
     }
 
     /**
-     * Lista de todos los cursos disponibles
+     * Lista de cursos a los que el usuario
+     * logueado está suscrito
      * 
      * @return View
      */

@@ -30,16 +30,6 @@ if (! function_exists('isAdmin')) {
     }
 }
 
-if (! function_exists('isTeacher')) {
-    /**
-     * @return string
-     */
-    function isTeacher()
-    {
-        return auth()->user()->level->slug === 'teacher';
-    }
-}
-
 if (! function_exists('isStudent')) {
     /**
      * @return string

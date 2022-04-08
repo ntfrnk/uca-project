@@ -10,8 +10,11 @@ use App\Models\User;
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Muestra un listado con los usuarios del sistema
+     * Si recibe el parámetro "level_id" filtra los
+     * usuarios según el tipo requerido
      *
+     * @param int $level_id
      * @return View
      */
     public function index($level_id = '')
@@ -27,7 +30,8 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Muestra el formulario de creación
+     * de un nuevo usuario
      *
      * @return View
      */
@@ -38,9 +42,9 @@ class UserController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Guarda el nuevo usuario en el sistema
      *
-     * @param \App\Http\Requests\StoreUserRequest $request
+     * @param App\Http\Requests\StoreUserRequest $request
      * @return Redirect
      */
     public function store(StoreUserRequest $request)
@@ -57,9 +61,9 @@ class UserController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Muestra el formulario de edición de usuario
      *
-     * @param \App\Models\User $user
+     * @param App\Models\User $user
      * @return View
      */
     public function edit(User $user)
@@ -69,10 +73,10 @@ class UserController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Guarda los cambios en un usuario
      *
-     * @param \App\Http\Requests\UpdateUserRequest $request
-     * @param \App\Models\User $user
+     * @param App\Http\Requests\UpdateUserRequest $request
+     * @param App\Models\User $user
      * @return Redirect
      */
     public function update(UpdateUserRequest $request, User $user)
@@ -89,7 +93,7 @@ class UserController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Elimina un usuario
      *
      * @param \App\Models\User $user
      * @return Redirect
@@ -112,9 +116,10 @@ class UserController extends Controller
     }
 
     /**
-     * Se agrega un usuario con datos aleatorios
+     * Se crea un usuario con datos aleatorios
+     * el tipo estará determinado por el "level_id"
      *
-     * @param \App\Models\User $user
+     * @param int $level_id
      * @return Redirect
      */
     public function newRandomUser($level_id = '3')
