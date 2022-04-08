@@ -35,17 +35,29 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 	cd uca-project
 	```
 
-3. Copiar el archivo de entorno
+3. Instalar las dependencias de composer
+
+	```
+	composer install
+	```
+
+4. Copiar el archivo de entorno y generar la APP_KEY
 
 	```
 	cp .env.example .env
+	php artisan key:generate
 	```
 
-4. Configurar las variables de entorno de Laravel (particularmente las variables que se detallan a continuación):
+5. Instalar las dependencias de NPM y realizar la compilación de archivos
 
 	```
-	APP_URL=
+	npm install
+	npm run prod
+	```
 
+6. Configurar las variables de entorno de Laravel (particularmente las variables que se detallan a continuación, que contienen la configuración de la conexión a la base de datos):
+
+	```
 	DB_CONNECTION=pgsql
 	DB_HOST=127.0.0.1
 	DB_PORT=5432
@@ -53,24 +65,18 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 	DB_USERNAME=
 	DB_PASSWORD=
 	```
-
-5. Instalar las dependencias de composer
-
-	```
-	composer install
-	```
-
-6. Instalar las dependencias de NPM y realizar la compilación de archivos
+	
+7. Una vez instalado el Framework con sus dependencias y configuraciones, pasamos a ejecutar las migraciones y seeders para inicializar la plataforma:
 
 	```
-	npm install
+	php artisan migrate --seed
 	```
 
-	y luego...
+8. Ahora el sistema debería estar instalado; con sus tablas creadas y con sus datos básicos inicializados.
 
-	```
-	npm run prod
-	```
 
-7. 
+## Indicaciones de uso
 
+Al ejecutar las migraciones y seeders el sistema creará una serie de datos imprescindibles para el funcionamiento de la plataforma. Uno de esos datos es un usuario genérico con permisos de administrador, que podrá acceder por primera vez a la plataforma para gestionar los cursos, alumnos, profesores, administradores y suscripciones.
+
+![Modelo de datos](http://frankoca.com.ar/images/DB.jpeg)
