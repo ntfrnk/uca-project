@@ -18,7 +18,7 @@ El *UCA Project* fue desarrollado combinando las más recientes técnicas y tecn
 - Bootstrap 5.1.3
 - SASS 1.49.11
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
+Como tecnología principal, el *UCA Project* utiliza Laravel 8, el cual conecta a todas las demás antes mencionadas, y se busca aprovechar al máximo las características ofrecidas por este framework, tales como los Middlewares, Helpers, Providers, View Composers, Components, archivos de configuración y todas aquellas relacionadas al modelo de datos, que se detalla más adelante.
 
 
 ## Instalación y puesta en marcha
@@ -77,7 +77,29 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 8. Ahora el sistema debería estar instalado; con sus tablas creadas y con sus datos básicos inicializados.
 
 
-## Modelo de datos
+## Modelo de datos y convenciones
+
+El modelo de datos se desarrolló respetando las convenciones indicadas en la documentación oficial de Laravel 8, haciendo uso de algunas de sus características nativas, como su ORM Eloquent, y su sistema de migraciones, seeders y factories.
+
+El sistema consiste en un esquema relacional formado por seis tablas, de las cuales surgen cuatro modelos, conectados por dos tablas dinámicas que funcionan como pivot's entre los modelos antes mencionados.
+
+Las tablas son las siguientes:
+
+	- levels (Tipos de usuarios: alumnos|profesores|administradores)
+	- users (Datos de usuarios)
+	- courses (Información de cada curso)
+	- roles (Tipos de profesores: titular|suplente|adjunto)
+	- subscriptions (guarda las suscripciones de alumnos a cursos)
+	- teachers (guarda las relaciones entre profesores, roles y cursos)
+
+Los modelos son los siguientes:
+
+	- Level
+	- User
+	- Course
+	- Role
+
+El esquema relacional es el siguiente:
 
 <img src="http://frankoca.com.ar/images/DB.jpeg" width='700px' />
 
