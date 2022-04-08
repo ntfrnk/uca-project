@@ -75,6 +75,15 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 8. Ahora el sistema debería estar instalado; con sus tablas creadas y con sus datos básicos inicializados.
 
 
+## Modelo de datos
+
+<div>
+	<p style="text-align:center;">
+		<img src="http://frankoca.com.ar/images/DB.jpeg" width="300px">
+	</p>
+</div>
+
+
 ## Indicaciones de uso
 
 Al ejecutar las migraciones y seeders el sistema creará una serie de datos imprescindibles para el funcionamiento de la plataforma. Uno de esos datos es un usuario genérico con permisos de administrador, que podrá acceder por primera vez a la plataforma para gestionar los cursos, alumnos, profesores, administradores y suscripciones.
