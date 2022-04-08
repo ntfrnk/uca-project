@@ -9,23 +9,13 @@ class SubscriptionsComposer {
 	public function compose(View $view)
 	{
 		foreach($view->courses as $item){
-			$item->newparam = "algo";
+			$item->subscribed = in_array($item->id, user()->courses->pluck('id')->toArray()) ? true : false;
 			$items[] = $item;
 		}
 
-		dd($items);
-
 		$view->courses = $items;
 
-		$variable = 'algo';
-
-		dd($view);
-		return $view->with(compact('variable'));
-	}
-
-	public function exclude()
-	{
-		// code...
+		return $view;
 	}
 
 }

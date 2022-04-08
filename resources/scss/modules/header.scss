@@ -4,13 +4,30 @@ header {
 	height: 80px;
 
 	.fullnav {
-		height: 75px;
+		height: 80px;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 
 		.logo {
-			font-size: 2rem;
+			font-size: 3.6rem;
+			line-height: 4rem;
+
+			.brand {
+				display: flex;
+				align-items: center;
+				margin-top: 8px;
+
+				span {
+					font-family: "Amiri" !important;
+					font-weight: 400;
+				}
+
+				small {
+					font-size: 1.3rem;
+					margin-left: 1rem;
+				}
+			}
 			
 			a {
 				color: $white;

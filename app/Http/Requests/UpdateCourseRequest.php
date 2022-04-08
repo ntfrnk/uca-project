@@ -13,7 +13,7 @@ class UpdateCourseRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class UpdateCourseRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|string|between:5,255',
+            'description' => 'nullable|string',
         ];
+    }
+
+    /**
+     * Get the messages for validations.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return config('validation.messages.course');
     }
 }

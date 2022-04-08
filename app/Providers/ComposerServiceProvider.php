@@ -24,6 +24,6 @@ class ComposerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['home'], 'App\Http\ViewComposers\SubscriptionsComposer');
+        View::composer(['student.course.index'], 'App\Http\ViewComposers\SubscriptionsComposer');
     }
 }

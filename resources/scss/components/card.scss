@@ -1,9 +1,29 @@
 
+.card {
+	display: flex;
+	width: 100%;
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		//height: 150px;
+	}
+
+	.buttons {
+
+	}
+}
+
 .truncate {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
+
+	&.t1 {
+		-webkit-line-clamp: 1;
+	}
 
 	&.t2 {
 		-webkit-line-clamp: 2;

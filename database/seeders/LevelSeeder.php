@@ -1,0 +1,36 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\Level;
+
+class LevelSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $levels = [
+            [
+                'name' => 'Administrador',
+                'slug' => 'admin',
+            ],
+            [
+                'name' => 'Profesor', 
+                'slug' => 'teacher',
+            ],
+            [
+                'name' => 'Estudiante',
+                'slug' => 'student',
+            ],
+        ];
+
+        foreach($levels as $level){
+            Level::insert($level);
+        }
+    }
+}

@@ -10,6 +10,7 @@
         @yield('content')
     </main>
     @include('_layouts.footer')
+    @include('_layouts.scripts')
 
 </body>
 </html>

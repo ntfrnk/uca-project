@@ -9,19 +9,22 @@ class Course extends Model
 {
     use HasFactory;
 
-    public function students()
-    {
-        return $this->belongsToMany('App\Models\Student');
-    }
+    protected $table = 'courses';
+    protected $guarded = [];
 
     public function roles()
     {
-        return $this->belongsToMany('App\Models\Role');
+        return $this->belongsToMany(Role::class, 'teachers')->withPivot('user_id');
     }
 
     public function teachers()
     {
-        return $this->belongsToMany('App\Models\Teacher');
+        return $this->belongsToMany(User::class, 'teachers')->withPivot('role_id');
+    }
+
+    public function students()
+    {
+        return $this->belongsToMany(User::class, 'subscriptions');
     }
     
 }

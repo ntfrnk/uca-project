@@ -13,7 +13,7 @@ class StoreTeacherRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,18 @@ class StoreTeacherRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'user_id' => 'required|exists:users,id',
+            'role_id' => 'required|exists:roles,id',
         ];
+    }
+
+    /**
+     * Get the messages for validations.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return config('validation.messages.teachers');
     }
 }
