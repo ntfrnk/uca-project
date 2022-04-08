@@ -31,14 +31,19 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 
 2. Ingresar a la carpeta del proyecto
 
+	```
 	cd uca-project
+	```
 
 3. Copiar el archivo de entorno
 
+	```
 	cp .env.example .env
+	```
 
 4. Configurar las variables de entorno de Laravel (particularmente las variables que se detallan a continuación):
 
+	```
 	APP_URL=
 
 	DB_CONNECTION=pgsql
@@ -47,11 +52,25 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 	DB_DATABASE=
 	DB_USERNAME=
 	DB_PASSWORD=
+	```
 
+5. Instalar las dependencias de composer
 
-
-4. Instalar las dependencias de composer
-
+	```
 	composer install
+	```
 
-4. 
+6. Instalar las dependencias de NPM y realizar la compilación de archivos
+
+	```
+	npm install
+	```
+
+	y luego...
+
+	```
+	npm run prod
+	```
+
+7. 
+
