@@ -79,7 +79,7 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 
 <div>
 	<p style="text-align:center;">
-		<img src="http://frankoca.com.ar/images/DB.jpeg" width="300px">
+		<img src="http://frankoca.com.ar/images/DB.jpeg" width="600px">
 	</p>
 </div>
 
@@ -88,4 +88,4 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 
 Al ejecutar las migraciones y seeders el sistema creará una serie de datos imprescindibles para el funcionamiento de la plataforma. Uno de esos datos es un usuario genérico con permisos de administrador, que podrá acceder por primera vez a la plataforma para gestionar los cursos, alumnos, profesores, administradores y suscripciones.
 
-![Modelo de datos](http://frankoca.com.ar/images/DB.jpeg)
+
