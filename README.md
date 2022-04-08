@@ -25,8 +25,9 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 
 1. Descargar el repositorio (esto debe hacerse en el directorio de publicación del servidor):
 	
-	``
+	```
 	git clone https://github.com/ntfrnk/uca-project.git
+	```
 
 2. Ingresar a la carpeta del proyecto
 
