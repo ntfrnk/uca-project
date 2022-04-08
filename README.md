@@ -60,6 +60,8 @@ La instalación del *UCA Project* debe ser realizada respetando los siguientes p
 6. Configurar las variables de entorno de Laravel (particularmente las variables que se detallan a continuación, que contienen la configuración de la conexión a la base de datos):
 
 	```
+	APP_URL=
+
 	DB_CONNECTION=pgsql
 	DB_HOST=127.0.0.1
 	DB_PORT=5432

@@ -8,7 +8,7 @@
         </div>
         
         <div class="buttons mt10">
-            <a href="/api/course/{{ $course->id }}/students" target="_blank" class="btn btn-sm btn-dark fr" title="Ver reporte de alumnos inscriptos">
+            <a href="{{ env('APP_URL') }}/api/course/{{ $course->id }}/students" target="_blank" class="btn btn-sm btn-dark fr" title="Ver reporte de alumnos inscriptos">
                 <x-Icon name="file" color="#FFF" size="18" />
             </a>
             <a href="{{ route('course.students', $course) }}" class="btn btn-sm btn-info" title="Alumnos">
