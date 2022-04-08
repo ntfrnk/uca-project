@@ -114,7 +114,7 @@ En esta imagen podemos ver encuadrados dos grupos de funcionalidades útiles par
 	1. Filtro de usuarios según su rango (alumnos, profesores, administradores).
 	2. Opciones de edición / eliminación de usuarios.
 
-<img src="http://frankoca.com.ar/images/cursos-acciones.png" width='600px' />
+<img src="http://frankoca.com.ar/images/cursos-opciones.png" width='600px' />
 
 En este screenshot se puede observar las diferentes opciones que ofrece la plataforma para administrar los cursos.
 
